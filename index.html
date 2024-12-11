@@ -22,9 +22,9 @@
 
     <div id="menu" class="esconder">
         <ul>
-            <li> <a href="#" id="numButton" onclick="showNumButton()">Sorteador de Números</a></li>
-            <li><a href="#" id="teamButton" onclick="showTeamButton()">Sorteador de Times</a></li>
-            <li><a href="#" id="nameButton" onclick="showNameButton()">Sorteador De Nomes</a></li>
+            <li> <a href="#" id="numButton" onclick="showNumButton()">SORTEADOR DE NÚMEROS</a></li>
+            <li><a href="#" id="teamButton" onclick="showTeamButton()">SORTEADOR DE TIMES</a></li>
+            <li><a href="#" id="nameButton" onclick="showNameButton()">SORTEADOR DE NOMES</a></li>
         </ul>
     </div>
 
@@ -46,9 +46,9 @@
         </section>
 
         <section id="resultNumbers" class="popUpResult" style="display: none;">
-            <section id="resultContent" class="popUpResultContent">
+            <section class="popUpResultContent">
                 <p id="boxResultNumbers"></p>
-                <button id="closeBtn" onclick="closePopUpN()">Fechar</button>
+                <button class="closeBtn" onclick="closePopUp('resultNumbers')">✖</button>
             </section>
         </section>
 
@@ -68,12 +68,11 @@
         </section>
 
         <section id="resultTeams" class="popUpResult" style="display: none;">
-            <section id="resultContent" class="popUpResultContent">
+            <section class="popUpResultContent">
                 <p id="boxResultTeam"></p>
-                <button id="closeBtn" onclick="closePopUpT()">Fechar</button>
-            </section>
-        </section>
-
+                <button class="closeBtn" onclick="closePopUp('resultTeams')">✖</button>
+             </section>
+         </section>
         <!-- /////////////////////////////////////////////// -->
 
 
@@ -90,9 +89,9 @@
         </section>
         
         <section id="resultNames" class="popUpResult" style="display: none;">
-            <section id="resultContent" class="popUpResultContent">
+            <section class="popUpResultContent">
                 <p id="boxResultName"></p>
-                <button id="closeBtn" onclick="closePopUpNa()">Fechar</button>
+                <button class="closeBtn" onclick="closePopUp('resultNames')">✖</button>
             </section>
         </section>
                 <!-- /////////////////////////////////////////////// -->

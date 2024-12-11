@@ -25,20 +25,16 @@ function sortear(vezes, v1, v2) {
 }
 
 
-function closePopUpN() {
-    document.getElementById('resultNumbers').style.display = 'none';
-    valores = []
+function closePopUp(popUpId) {
+    const popUp = document.getElementById(popUpId);
+    if (popUp) {
+        popUp.classList.add('hidden'); 
+        setTimeout(() => {
+            popUp.style.display = 'none'; 
+            popUp.classList.remove('hidden'); 
+        }, 300);
+    }
 }
-
-function closePopUpT() {
-    document.getElementById('resultTeams').style.display = 'none';
-    valores = []
-}
-function closePopUpNa() {
-    document.getElementById('resultNames').style.display = 'none';
-    valores = []
-}
-
 
 function getUserNumber() {
 
@@ -148,5 +144,5 @@ function sortearTimes() {
         .join('\n\n');
 
     document.getElementById('boxResultTeam').innerText = resultTextTeams;
-    document.getElementById('resultTeams').style.display = 'block';
+    document.getElementById('resultTeams').style.display = 'flex';
 }
