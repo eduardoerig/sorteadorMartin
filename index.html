@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="cabecario">
+                <img src="logo horizontal.png" alt="logo">
+                <button onclick="hiddenMenu()" class="botaoManeiro" id="menuButton"><i
+                        class="fa-solid fa-bars"></i>Menu</button>
+            </section>
+        </nav>
+    </header>
+
+    <div id="menu" class="esconder">
+        <ul>
+            <li> <a href="#" id="numButton" onclick="showNumButton()">Sorteador de Números</a></li>
+            <li><a href="#" id="teamButton" onclick="showTeamButton()">Sorteador de Times</a></li>
+            <li><a href="#" id="nameButton" onclick="showNameButton()">Sorteador De Nomes</a></li>
+        </ul>
+    </div>
+
+    <main> 
+        <!-- /////////////////////////////////////////////// -->
+        <section id="sorteadorNum" class="sorteadorNum">
+            <section class="box-sorteio">
+                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
+                <h4>Sortear: <input type="number" id="quantity" min="1" value="1"> números</h4>
+                <p>---------------------------------------------------------</p>
+                <h4>entre <input type="number" id="minValue" min="1" value="1"> a <input type="number" id="maxValue"
+                        min="1" value="100"></h4>
+                <br>
+                <h5 class="alarm">O número será exibido na tela <br> após clicar no botão abaixo</h5>
+            </section>
+            <div class="bunda">
+                <button class="botaoManeiro" id="drawButton" onclick="getUserNumber()">SORTEAR AGORA</button>
+            </div>
+        </section>
+
+        <section id="resultNumbers" class="popUpResult" style="display: none;">
+            <section id="resultContent" class="popUpResultContent">
+                <p id="boxResultNumbers"></p>
+                <button id="closeBtn" onclick="closePopUpN()">Fechar</button>
+            </section>
+        </section>
+
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <section id="sorteadorTeam" class="sorteadorTeam" style="display: none;">
+            <section class="box-sorteio">
+                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
+                <textarea id="players"
+                    placeholder="Digite os nomes dos jogadores, separados por vírgulas..."></textarea>
+                <p>Número de equipes:</p><input class="numEquipe" type="number" id="teamCount" min="2" value="2">
+                <div class="bunda">
+                    <button class="botaoManeiro" id="teamSortButton" onclick="sortearTimes()">SORTEAR AGORA</button>
+                </div>
+            </section>
+        </section>
+
+        <section id="resultTeams" class="popUpResult" style="display: none;">
+            <section id="resultContent" class="popUpResultContent">
+                <p id="boxResultTeam"></p>
+                <button id="closeBtn" onclick="closePopUpT()">Fechar</button>
+            </section>
+        </section>
+
+        <!-- /////////////////////////////////////////////// -->
+
+
+        <section id="sorteadorName" class="sorteadorName" style="display: none;">
+            <section class="box-sorteio">
+                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
+                <textarea id="names" placeholder="Digite os nomes dos jogadores, separados por vírgulas..."></textarea>
+                <p>Número de nomes a sortear:</p>
+                <input class="numNomes" type="number" id="numNomes" min="1" value="1">
+            </section>
+            <div class="bunda">
+                <button class="botaoManeiro" id="nameSortButton" onclick="sortearName()">SORTEAR AGORA</button>
+            </div>
+        </section>
+        
+        <section id="resultNames" class="popUpResult" style="display: none;">
+            <section id="resultContent" class="popUpResultContent">
+                <p id="boxResultName"></p>
+                <button id="closeBtn" onclick="closePopUpNa()">Fechar</button>
+            </section>
+        </section>
+                <!-- /////////////////////////////////////////////// -->
+
+
+        
+      
+
+        
+
+
+    </main>
+
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
