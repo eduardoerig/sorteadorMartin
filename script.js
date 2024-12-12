@@ -10,14 +10,14 @@ function sortear(vezes, v1, v2) {
         return;
     }
 
-    valores = []; 
+    valores = [];
 
     for (let i = 0; i < vezes; i++) {
         let sorte = Math.floor(Math.random() * (v2 - v1 + 1)) + v1;
-        valores.push(sorte); 
+        valores.push(sorte);
     }
 
-    let valoresString = valores.join(', '); 
+    let valoresString = valores.join(', ');
     document.getElementById('boxResultNumbers').innerText = `Números sorteados: ${valoresString}`;
     document.getElementById('resultNumbers').style.display = 'flex';
 
@@ -28,10 +28,10 @@ function sortear(vezes, v1, v2) {
 function closePopUp(popUpId) {
     const popUp = document.getElementById(popUpId);
     if (popUp) {
-        popUp.classList.add('hidden'); 
+        popUp.classList.add('hidden');
         setTimeout(() => {
-            popUp.style.display = 'none'; 
-            popUp.classList.remove('hidden'); 
+            popUp.style.display = 'none';
+            popUp.classList.remove('hidden');
         }, 300);
     }
 }
@@ -58,9 +58,9 @@ function getUserNumber() {
 /* esconder menu */
 
 
-function hiddenMenu(){
+function hiddenMenu() {
     const menu = document.getElementById('menu')
-    
+
     console.log('Foi clicado!');
     menu.classList.toggle('esconder');
 }
@@ -86,7 +86,7 @@ function showNameButton() {
     document.getElementById("sorteadorTeam").style.display = 'none';
     document.getElementById("sorteadorName").style.display = 'block';
 }
- 
+
 /* sortear nomes */
 
 function sortearName() {
@@ -94,13 +94,15 @@ function sortearName() {
     let numNomes = parseInt(document.getElementById('numNomes').value);
 
     if (isNaN(numNomes) || numNomes <= 0) {
-        alert("Parâmetros inválidos!");
-        return;
+        document.getElementById('boxResultTeam').innerText = "Insira a quantidade de jogadores certa!";
+        document.getElementById('resultTeams').style.display = 'flex';
+       return;
     }
 
     if (names.length < numNomes || names[0] === "") {
-        alert("Parâmetros inválidos!");
-        return;
+        document.getElementById('boxResultTeam').innerText = "Insira a quantidade de jogadores certa!";
+        document.getElementById('resultTeams').style.display = 'flex';
+       return;
     }
 
     var nomesSorteados = [];
@@ -122,16 +124,18 @@ function sortearTimes() {
     let numTeams = parseInt(document.getElementById('teamCount').value);
 
     if (isNaN(numTeams) || numTeams < 2) {
-        alert("Parâmetros inválidos!");
+        document.getElementById('boxResultTeam').innerText = "Insira a quantidade de participantes certa!";
+        document.getElementById('resultTeams').style.display = 'flex';
         return;
     }
 
     if (participants.length < numTeams || participants[0] === "") {
-        alert("Parâmetros inválidos!");
+        document.getElementById('boxResultTeam').innerText = "Insira a quantidade de participantes certa!";
+        document.getElementById('resultTeams').style.display = 'flex';
         return;
     }
 
-    participants = participants.map(name => name.trim()); 
+    participants = participants.map(name => name.trim());
     participants = participants.sort(() => Math.random() - 0.5);
 
     let teams = Array.from({ length: numTeams }, () => []);

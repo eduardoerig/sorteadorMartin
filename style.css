@@ -13,6 +13,16 @@ body {
     animation: gradientBG 8s ease infinite;
 }
 
+@media (max-width: 768px) {
+    .cabecario {
+        flex-direction: column;
+        align-items: center;
+    }
+    .botaoManeiro {
+        font-size: 16px;
+    }
+}
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
@@ -40,7 +50,9 @@ header {
 }
 
 .cabecario img {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 header .botaoManeiro{
     margin-right: 10px;
@@ -52,6 +64,7 @@ header .botaoManeiro i{
  margin-right: 5px;
 }
 #menu {
+    
     top: 150px; 
     right: 0;
     background-color: white;
@@ -62,6 +75,7 @@ header .botaoManeiro i{
 }
 
 #menu ul {
+    flex-wrap: wrap;
     list-style: none;
     display: flex;
     text-align: center;
@@ -97,80 +111,104 @@ main{
     
 }
 /* Sorteador */
+
+.sorteadorTeam,
+.sorteadorNum,
+.sorteadorName {
+    width: 1000px;
+}
+
+
 section .logobranca {
     display: flex;
     justify-content: center;
     height: 100px;
-    margin: 30px;
+    margin: 30px auto;
 }
-.bunda{
+
+
+.bunda {
     text-align: center;
-    margin-top:30px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .botaoManeiro {
     background-color: #54585a;
-    color: white;     
-    padding: 15px 30px; 
-    font-size: 18px; 
-    font-weight: bold; 
-    border: none; 
-    border-radius: 50px; 
-    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); 
-    cursor: pointer; 
-    transition: all 0.3s ease-in-out; 
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
 .botaoManeiro:hover {
-    background-image: linear-gradient(135deg, #4e5052, #253033); 
-    transform: scale(1.1); 
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3); 
+    color: #fff;
+    background-image: linear-gradient(135deg, #4e5052, #253033);
+    transform: scale(1.1);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
 }
 
 .botaoManeiro:active {
     transform: scale(1);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
-.box-sorteio{
-    color: white;
-    background-color: #54585a;
-    height: 420px;
+
+.sorteadorNum .box-sorteio h4 {
+    padding: 10px;
+}
+
+.box-sorteio {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    height: 520px;
     padding: 20px;
-    margin-top: 60px;
+    margin: 60px auto 0;
     font-size: 30px;
     text-align: center;
-    border-radius: 50px; 
+    border-radius: 50px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
-.box-sorteio input{
-    font-size: 35px;
-    width: 80px;
-    border-radius: 10px;
 
+.box-sorteio input {
+    font-size: 35px;
+    width: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
 }
-.alarm{
+
+/* Estilo de alerta */
+.box-sorteio .alarm {
+    margin-top: 50px;
     color: rgb(255, 81, 0);
-    border: white;
+    border: none;
 }
 /* Fundo do pop-up */
 .popUpResult {
-    display: none; /* Oculto por padrão */
+    display: none; 
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5); 
     justify-content: center;
     align-items: center;
-    display: flex; /* Facilita centralização */
-    animation: fadeIn 0.3s ease-in-out; /* Animação de entrada */
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out; 
 }
 
 .popUpResult.hidden {
     animation: fadeOut 0.3s ease-in-out;
-    pointer-events: none; /* Previne cliques durante a animação de saída */
+    pointer-events: none; 
 }
 
 /* Estilo do conteúdo */
@@ -235,13 +273,28 @@ section .logobranca {
 
 textarea {
     width: 100%;
-    height: 100px;
-    margin-bottom: 15px;
-    padding: 10px;
+    max-width: 800px;
+    height: 150px;
+    padding: 15px;
     font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f9f9f9;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    resize: none;
+    resize: vertical;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
 }
+
+textarea:focus {
+    outline: none;
+    border-color: #54585a;
+    box-shadow: 0px 0px 10px rgba(84, 88, 90, 0.5);
+}
+
 
 .numEquipe{
         width: 100%;

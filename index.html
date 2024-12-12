@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorteador</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Sorteador online para números, times e nomes.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -32,9 +33,8 @@
         <!-- /////////////////////////////////////////////// -->
         <section id="sorteadorNum" class="sorteadorNum">
             <section class="box-sorteio">
-                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
+                <img class="logobranca" src="logo horizontal.png" alt="logo">
                 <h4>Sortear: <input type="number" id="quantity" min="1" value="1"> números</h4>
-                <p>---------------------------------------------------------</p>
                 <h4>entre <input type="number" id="minValue" min="1" value="1"> a <input type="number" id="maxValue"
                         min="1" value="100"></h4>
                 <br>
@@ -57,14 +57,15 @@
 
         <section id="sorteadorTeam" class="sorteadorTeam" style="display: none;">
             <section class="box-sorteio">
-                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
+                <img class="logobranca" src="logo horizontal.png" alt="logo">
                 <textarea id="players"
-                    placeholder="Digite os nomes dos jogadores, separados por vírgulas..."></textarea>
+                    placeholder="Digite os nomes dos participantes, separados por vírgulas..."></textarea>
                 <p>Número de equipes:</p><input class="numEquipe" type="number" id="teamCount" min="2" value="2">
-                <div class="bunda">
-                    <button class="botaoManeiro" id="teamSortButton" onclick="sortearTimes()">SORTEAR AGORA</button>
-                </div>
+            
             </section>
+            <div class="bunda">
+                <button class="botaoManeiro" id="teamSortButton" onclick="sortearTimes()">SORTEAR AGORA</button>
+            </div>
         </section>
 
         <section id="resultTeams" class="popUpResult" style="display: none;">
@@ -78,8 +79,8 @@
 
         <section id="sorteadorName" class="sorteadorName" style="display: none;">
             <section class="box-sorteio">
-                <img class="logobranca" src="Logo Martin Luther.png" alt="logo">
-                <textarea id="names" placeholder="Digite os nomes dos jogadores, separados por vírgulas..."></textarea>
+                <img class="logobranca" src="logo horizontal.png" alt="logo">
+                <textarea id="names" placeholder="Digite os nomes dos participantes, separados por vírgulas..."></textarea>
                 <p>Número de nomes a sortear:</p>
                 <input class="numNomes" type="number" id="numNomes" min="1" value="1">
             </section>
