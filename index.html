@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,25 +20,22 @@
 
     <div id="menu">
         <ul>
-            <li> <a href="#" id="numButton" onclick="showNumButton()">SORTEADOR DE NÚMEROS</a></li>
+            <li><a href="#" id="numButton" onclick="showNumButton()">SORTEADOR DE NÚMEROS</a></li>
             <li><a href="#" id="teamButton" onclick="showTeamButton()">SORTEADOR DE TIMES</a></li>
             <li><a href="#" id="nameButton" onclick="showNameButton()">SORTEADOR DE NOMES</a></li>
         </ul>
     </div>
 
-    <main> 
-
+    <main>
         <aside class="bn1">
-            <img src="BANNER1.png" alt="">
+            <img src="BANNER1.png" alt="Banner 1">
         </aside>
-        <!-- /////////////////////////////////////////////// -->
+
         <section id="sorteadorNum" class="sorteadorNum">
             <section class="box-sorteio">
                 <img class="logosorteador" src="Logo sorteador.png" alt="logo">
                 <h4>Sortear: <input type="number" id="quantity" min="1" value="1"> números</h4>
-                <h4>entre <input type="number" id="minValue" min="1" value="1"> a <input type="number" id="maxValue"
-                        min="1" value="100"></h4>
-                <br>
+                <h4>entre <input type="number" id="minValue" min="1" value="1"> a <input type="number" id="maxValue" min="1" value="100"></h4>
                 <h5 class="alarm">O número será exibido na tela <br> após clicar no botão abaixo</h5>
             </section>
             <div class="bunda">
@@ -54,16 +50,12 @@
             </section>
         </section>
 
-        <!-- /////////////////////////////////////////////// -->
-
-
         <section id="sorteadorTeam" class="sorteadorTeam" style="display: none;">
             <section class="box-sorteio">
                 <img class="logosorteador" src="Logo sorteador.png" alt="logo">
-                <textarea id="players"
-                    placeholder="Digite os nomes dos participantes, separados por vírgulas..."></textarea>
-                <h4>Número de equipes:</h4><input class="numEquipe" type="number" id="teamCount" min="2" value="2">
-            
+                <textarea id="players" placeholder="Digite os nomes dos participantes, separados por vírgulas..."></textarea>
+                <h4>Número de equipes:</h4>
+                <input class="numEquipe" type="number" id="teamCount" min="2" value="2">
             </section>
             <div class="bunda">
                 <button class="botaoManeiro" id="teamSortButton" onclick="sortearTimes()">SORTEAR AGORA</button>
@@ -74,10 +66,8 @@
             <section class="popUpResultContent">
                 <p id="boxResultTeam"></p>
                 <button class="closeBtn" onclick="closePopUp('resultTeams')">✖</button>
-             </section>
-         </section>
-        <!-- /////////////////////////////////////////////// -->
-
+            </section>
+        </section>
 
         <section id="sorteadorName" class="sorteadorName" style="display: none;">
             <section class="box-sorteio">
@@ -97,16 +87,13 @@
                 <button class="closeBtn" onclick="closePopUp('resultNames')">✖</button>
             </section>
         </section>
-                <!-- /////////////////////////////////////////////// -->
-<aside class="bn2">
-    <img src="BANNER2.png" alt="">
-</aside>
+
+        <aside class="bn2">
+            <img src="BANNER2.png" alt="Banner 2">
+        </aside>
     </main>
 
-    <footer>
-    </footer>
-
+    <footer></footer>
     <script src="script.js"></script>
 </body>
-
 </html>
