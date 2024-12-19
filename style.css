@@ -68,7 +68,7 @@ header .botaoManeiro i {
 #menu {
     top: 100px; 
     right: 0;
-    background-color: white;
+    background-color: rgb(250, 247, 247);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 15px;
     z-index: 1000;
@@ -101,10 +101,6 @@ header .botaoManeiro i {
     font-size: 16px;
 }
 
-.esconder {
-    display: none;
-}
-
 /* MAIN */
 main{
     display: flex;
@@ -113,16 +109,16 @@ main{
 }
 
 aside img{
-    width: 400px;
+    width: 350px;
 }
 
 .bn1 img{
-    margin-right: 350px;
+    margin-right: 300px;
 }
 
 
 .bn2 img{
-    margin-left: 350px;
+    margin-left: 300px;
 }
 /* Sorteador */
 
